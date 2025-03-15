@@ -33,17 +33,25 @@ public class Basic {
 		WebElement UName = driver.findElement(By.id("user-name"));
 		UName.sendKeys("visual_user");
 		
+		//Find Element//
+		
 		WebElement Pass = driver.findElement(By.id("password"));
 		Pass.sendKeys("secret_sauce");
 		
 		WebElement Btn = driver.findElement(By.id("login-button"));
 		Btn.click();
 		
-		List<WebElement> Product =driver.findElements(By.xpath("//div[@class = 'inventory_list']/div"));
+		//Find Elements//
+		
+		List<WebElement> Product = driver.findElements(By.xpath("//div[@class = 'inventory_list']/div"));
 		System.out.println("Total Size is "+Product.size());
+		
+		//Window Handle//
 		
 		String Fwindow = driver.getWindowHandle();
 		System.out.println(Fwindow);
+		
+		//Window Handles//
 		
 		driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div")).click();
 		Set<String> Swindow = driver.getWindowHandles();
