@@ -1,13 +1,13 @@
 package Youtube;
 
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Dropdown {
+public class Alllink {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,17 +18,16 @@ public class Dropdown {
 		
 		driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
 		
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		List<WebElement> All = driver.findElements(By.tagName("a"));
+		System.out.println("Total Links are: "+All.size());
 		
-		WebElement Drop = driver.findElement(By.id("input_1_8"));
-		Select select = new Select(Drop);
-		select.selectByValue("level5");
+		for(int i = 0; i<All.size(); i++)
+		{
+			System.out.println("Link: "+All.get(i).getAttribute("href"));
+			System.out.println("Text: "+All.get(i).getText());
+		}
 		
-		WebElement Drop1 = driver.findElement(By.id("input_1_75"));
-		Select select1 = new Select(Drop1);
-		select1.selectByVisibleText("Chemicals");
-
-		
+		driver.close();
 	}
 
 }
