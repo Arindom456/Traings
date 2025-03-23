@@ -33,6 +33,8 @@ public class WebElementMethod {
 		System.out.println(driver.findElement(By.id("gform_submit_button_1")).isDisplayed());
 		System.out.println(driver.findElement(By.id("gform_submit_button_1")).isEnabled());
 		System.out.println(driver.findElement(By.id("gform_submit_button_1")).isSelected());
+		driver.quit();
+	
 	}
 
 }
