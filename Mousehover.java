@@ -20,6 +20,10 @@ public class Mousehover {
 		WebElement Motor = driver.findElement(By.linkText("Motors"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Motor).perform();
+		//Right click//
+		action.contextClick(Motor).perform();
+		
+		
 	}
 
 }
