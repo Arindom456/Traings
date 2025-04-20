@@ -14,6 +14,7 @@ public class AutoSuggestDropdown {
 		driver.manage().window().maximize();
 		
 		//Close pop up//
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[@class ='commonModal__close']")).click();
 		
 		driver.findElement(By.xpath("//span[text() = 'From']")).click();

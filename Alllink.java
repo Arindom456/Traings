@@ -26,7 +26,7 @@ public class Alllink {
 			System.out.println("Text: "+All.get(i).getText());
 		}
 		
-		driver.close();
+		//driver.close();
 	}
 
 }
